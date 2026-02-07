@@ -28,21 +28,47 @@
                 <div class="progress-bar">
                     <div id="love-fill"></div>
                 </div>
+                <span id="timer">⏱️ 30s</span>
             </div>
+        </div>
+
+        <!-- Level Display & Code Input (Top Right) -->
+        <div id="level-container">
+            <div id="level-display">🔥 HARD LEVEL</div>
+            <div id="code-section">
+                <input type="text" id="code-input" placeholder="Enter code..." maxlength="10">
+                <button id="code-btn" class="btn-small">Unlock</button>
+            </div>
+            <div id="code-hint">💡 Demand it from me</div>
+            <div id="code-message"></div>
         </div>
 
         <!-- Start Screen -->
         <div id="start-screen" class="screen active">
-            <h1>Catch the Love!</h1>
-            <p>Catch enough hearts to reveal a special question...</p>
+            <h1>Hayya nalabou saghrounty !</h1>
+            <p>Lazmetek tlem 🌹 o teb3ed ala 💔</p>
+            <p>🌹 (+1) / 💔 (-1)</p>
             <button id="start-btn" class="btn">Start Game</button>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="gameover-screen" class="screen hidden">
+            <div class="gameover-content">
+                <h2>Wa9et oufa haha 😈​!</h2>
+                <p class="gameover-text">lazmetek tlem 15 warda ya aban warda...</p>
+                <p class="gameover-hint">💡 Feel free to ask me for the code to make the game easier!</p>
+                <div class="gameover-buttons">
+                    <button id="try-again-btn" class="btn">Try Again</button>
+                </div>
+            </div>
         </div>
 
         <!-- Proposal Modal (Hidden initially) -->
         <div id="proposal-screen" class="screen hidden">
             <div class="proposal-content">
-                <h1>Will You Be My Valentine?</h1>
-                <p class="sub-text">You caught my heart! Now I have to ask...</p>
+                <h1>Well done honeyy so fucking proud of you!</h1>
+                <p class="sub-text">Madam wselit lahna manaha you know your daddy so well 💖 but still have to ask</p>
+                <p class="sub-text">Can I be your lifetime distraction and let me spoil you properly?</p>
                 <div class="buttons">
                     <button id="yes-btn" class="btn yes-btn">YES!</button>
                     <button id="no-btn" class="btn no-btn">No</button>
@@ -50,10 +76,63 @@
             </div>
         </div>
 
-        <!-- Celebration Overlay -->
-        <div id="celebration-screen" class="screen hidden">
-            <h1>Happy Propose Day! 💍</h1>
-            <p>I love you!</p>
+        <!-- Pre-Quiz Celebration (after main game win) -->
+        <div id="pre-quiz-celebration" class="screen hidden">
+            <h1>Mazel mazel ya rouhii not this easy</h1>
+            <button id="next-to-quiz-btn" class="btn">Continue to Quiz 💋</button>
+        </div>
+
+        <!-- Post-Quiz Celebration (after quiz pass, before proposal) -->
+        <div id="post-quiz-celebration" class="screen hidden">
+            <div class="final-content">
+                <h1>You Passed! 🔥</h1>
+                <p class="wild-message">You know me so well... 😏</p>
+                <p class="romantic-message">But are you ready for the real question?</p>
+                <button id="next-to-proposal-btn" class="btn">Continue to Proposal 💍</button>
+            </div>
+        </div>
+
+        <!-- Final Celebration (after proposal YES) -->
+        <div id="final-celebration-screen" class="screen hidden">
+            <div class="final-content">
+                <h1>She Said YES! 💍🔥</h1>
+                <p class="wild-message">You have no idea what you just agreed to... 😏</p>
+                <p class="romantic-message">I used to call you mommy, rou7i, benty, saghrounty and each name fits you in
+                    a different way.
+                    Mommy : when you’ve got that irresistible “I’m in control” energy… 😏
+                    Rou7i : because you feel like home, the one I can’t breathe without. ❤️
+                    Benty / saghrounty : because you make me want to protect you, spoil you, and keep you close. 🥰
+                    I promise I’ll love you gently, then make you lose your focus on everything except me. 😈
+                    matetsawarich 9adah I want to show you exactly how serious I am about you ... nhes 9ad mana3mel 
+                    o 9ad man9oul manoufikich ha9ek taref alash ? khatrek unique and so pure tawa fhemit alash rakazit maak enty
+                    bedhaat khatrek real ... Nab9ach nahkii mena el ghodwa noufikich ha9ek mommy ..
+                     na3chee9 kol tafsila sghayrouna fik ❤️
+                    .</p>
+                <p class="promise">Forever yours. Always hungry for you. 💕</p>
+                <div class="hearts">❤️🔥💋🌹💍</div> 
+                <button id="play-again-btn" class="btn" style="margin-top: 30px;">Play Again 🔄</button>
+            </div>
+        </div>
+
+        <!-- Quiz Game Screen -->
+        <div id="quiz-screen" class="screen hidden">
+            <div class="quiz-container">
+                <h2>🔥 Wild Quiz 🔥</h2>
+                <div id="quiz-progress">Question 1 of 10</div>
+                <div id="quiz-question"></div>
+                <div id="quiz-options"></div>
+                <div id="quiz-score">Score: 0</div>
+            </div>
+        </div>
+
+        <!-- Quiz Results Screen -->
+        <div id="quiz-results-screen" class="screen hidden">
+            <div class="quiz-results-content">
+                <h2>🎯 Quiz Complete!</h2>
+                <div id="final-score"></div>
+                <p id="quiz-message"></p>
+                <button id="restart-btn" class="btn">Play Again</button>
+            </div>
         </div>
     </div>
 
