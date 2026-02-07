@@ -21,12 +21,12 @@ const SECRET_CODE = 'mommy';
 // Difficulty Settings
 const DIFFICULTY = {
     HARD: {
-        roseChance: 0.18,      // Only 18% roses (82% broken hearts!)
-        brokenHeartChance: 0.82,
-        roseSpeed: [2, 3],     // 2-3 speed (slower)
-        brokenSpeed: [6, 10],   // 6-10 speed (EXTREMELY fast!)
-        spawnRate: 0.06,       // Limited spawns (~20 roses max in 30s)
-        timeLimit: 30,         // 30 seconds
+        roseChance: 0.25,      
+        brokenHeartChance: 0.75,
+        roseSpeed: [2, 4],     
+        brokenSpeed: [6, 9],  
+        spawnRate: 0.11,       
+        timeLimit: 30,
         label: 'HARD LEVEL 🔥'
     },
     EASY: {
@@ -284,6 +284,10 @@ function updateGame() {
 function updateScore() {
     const percentage = (score / WIN_SCORE) * 100;
     loveMeter.style.width = `${percentage}%`;
+    const scoreCounter = document.getElementById('score-counter');
+    if (scoreCounter) {
+        scoreCounter.textContent = `${score}/${WIN_SCORE}`;
+    }
 }
 
 function triggerProposal() {

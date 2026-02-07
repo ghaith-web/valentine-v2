@@ -61,8 +61,22 @@ canvas {
     height: 15px;
     background: #ffe5ec;
     border-radius: 10px;
-    overflow: hidden;
+    overflow: visible;
     border: 1px solid var(--secondary-color);
+    position: relative;
+}
+
+#score-counter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #590d22;
+    z-index: 10;
+    text-shadow: 0 0 2px white;
+    pointer-events: none;
 }
 
 #timer {
